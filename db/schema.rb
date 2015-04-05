@@ -11,11 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150404195814) do
+ActiveRecord::Schema.define(version: 20150405192354) do
 
   create_table "microposts", force: :cascade do |t|
     t.text     "context"
     t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "content"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.integer  "imei"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
